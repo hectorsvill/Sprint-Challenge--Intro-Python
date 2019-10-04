@@ -41,13 +41,14 @@ def cityreader(cities=[]):
       # if line_count == 0:
         # print(f'Column names are {", ".join(row)}')
 
-      city = City(row['city'], row['lat'], row['lng'])
+      city = City(row['city'], float(row['lat']), float(row['lng']))
       cities.append(city)
         
 
   return cities
 
 cityreader(cities)
+
 
 # Print the list of cities (name, lat, lon), 1 record per line.
 for c in cities:
